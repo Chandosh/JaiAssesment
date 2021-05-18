@@ -1,0 +1,21 @@
+<div class="main-contianer">
+    <div fxLayout="column">
+        <h3>Select a city to view Weather Data</h3>
+        <mat-form-field fxLayout="row" appearance="outline" floatLabel="never">
+            <mat-select [formControl]="cityControl" name="food" placeholder="Select City">
+              <mat-option *ngFor="let city of cities" [value]="city.name">
+                {{city.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="cityControl.hasError('required')">
+                City is required
+            </mat-error>
+        </mat-form-field>
+        
+        <button matInput mat mat-raised-button class="submit-button"
+        color="primary" (click)="submit()" [disabled]="cityControl.hasError('required')">
+            Submit
+        </button>
+    </div>
+
+</div>

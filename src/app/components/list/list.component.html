@@ -1,0 +1,29 @@
+<div class="main-contianer">
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+            <span fxLayout="column">
+                Weather
+                <span>Main: {{weatherData?.weather[0]?.main}}</span>
+                <span>Description: {{weatherData?.weather[0]?.description}}</span>
+            </span>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span fxLayout="column">
+                Temparature
+                <span>Temparature: {{weatherData?.main.temp}}</span>
+                <span>Max Temparature: {{weatherData?.main.temp_max}}</span>
+                <span>Min Temparature: {{weatherData?.main.temp_min}}</span>
+                <span>Humidity: {{weatherData?.main.humidity}}</span>
+                <span>Pressure: {{weatherData?.main.pressure}}</span>
+            </span>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span fxLayout="column">
+                Wind
+                <span>Degree: {{weatherData?.wind.deg}}</span>
+                <span>Speed: {{weatherData?.wind.speed}}</span>
+                <span>Gust: {{weatherData?.main.gust}}</span>
+            </span>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
